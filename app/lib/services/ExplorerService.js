@@ -6,6 +6,10 @@ class ExplorerService {
     static getAmountOfExplorersByMission(explorers, mission) {
         return explorers.filter((explorer) => explorer.mission == mission).length;
     }
+
+    static getExplorersUsernamesByMission(explorers, mission) {
+        return explorers.filter((explorer) => explorer.mission == mission).map(function(explorer){return explorer.githubUsername});
+    }
 }
 
 module.exports = ExplorerService
