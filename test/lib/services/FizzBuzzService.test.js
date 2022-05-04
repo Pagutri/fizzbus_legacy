@@ -7,4 +7,9 @@ describe("Tests for FizzBuzzService", () => {
         const explorer1AfterFizzBuzz = FizzBuzzService.applyValidationInExplorer(explorer1)
         expect(explorer1AfterFizzBuzz.trick).toBe(1)
     })
+    test("2. Test trick attribute for explorer with score divisible only by 3", () => {
+        const explorer3 = {name: "Explorer3", score: 3}
+        const explorer3AfterFizzBuzz = FizzBuzzService.applyValidationInExplorer(explorer3) 
+        expect(explorer3AfterFizzBuzz.trick).toBe("FIZZ")
+    })
 })
