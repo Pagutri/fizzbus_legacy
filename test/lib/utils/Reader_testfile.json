@@ -1,0 +1,16 @@
+[
+    {
+      "name": "Woopa1",
+      "stacks": [
+        "javascript",
+        "reasonML",
+      ]
+    },
+    {
+      "name": "Woopa2",
+      "stacks": [
+        "javascript",
+        "groovy",
+      ]
+    }
+] 
