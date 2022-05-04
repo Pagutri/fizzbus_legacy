@@ -3,14 +3,14 @@
       "name": "Woopa1",
       "stacks": [
         "javascript",
-        "reasonML",
+        "reasonML"
       ]
     },
     {
       "name": "Woopa2",
       "stacks": [
         "javascript",
-        "groovy",
+        "groovy"
       ]
     }
-] 
+]
