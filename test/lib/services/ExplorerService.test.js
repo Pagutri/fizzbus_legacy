@@ -24,4 +24,10 @@ describe("Tests for ExplorerService", () => {
         const numberOfExplorers = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
         expect(numberOfExplorers).toBe(2)
     })
+
+    test("3. Get GitHub usernames of explorers in node mission", () => {
+        const explorers = Reader.readJsonFile("test/lib/services/ExplorerService_testfile.json");
+        const usernames = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
+        expect(usernames).toStrictEqual(["ajolonauta1", "ajolonauta2"])
+    })
 })
