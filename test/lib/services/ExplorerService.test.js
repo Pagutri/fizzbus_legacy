@@ -18,4 +18,10 @@ describe("Tests for ExplorerService", () => {
             }
         ])
     })
+
+    test("2. Get number of explorers in node mission", () => {
+        const explorers = Reader.readJsonFile("test/lib/services/ExplorerService_testfile.json");
+        const numberOfExplorers = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
+        expect(numberOfExplorers).toBe(2)
+    })
 })
