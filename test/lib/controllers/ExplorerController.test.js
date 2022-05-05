@@ -10,4 +10,9 @@ describe("Tests for ExplorerController", () => {
         const usernames = ExplorerController.getExplorersUsernamesByMission("node");
         expect(usernames[6]).toBe("ajolonauta12");
     });
+
+    test("3. Test for getExplorersAmonutByMission", () => {
+        const amount = ExplorerController.getExplorersAmonutByMission("node");
+        expect(amount).toBe(10);
+    });
 });
