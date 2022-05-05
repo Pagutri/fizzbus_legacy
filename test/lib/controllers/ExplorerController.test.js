@@ -15,4 +15,9 @@ describe("Tests for ExplorerController", () => {
         const amount = ExplorerController.getExplorersAmountByMission("node");
         expect(amount).toBe(10);
     });
+
+    test("5. Test for getTrickByNumber, when score is not divisible by 3 nor 5", () => {
+        const trickForScore1 = ExplorerController.getTrickByNumber(1);
+        expect(trickForScore1).toBe(1);
+    });
 });
