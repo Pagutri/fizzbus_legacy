@@ -24,4 +24,9 @@ describe("Tests for FizzBuzzService", () => {
         const explorer15AfterFizzBuzz = FizzBuzzService.applyValidationInExplorer(explorer15); 
         expect(explorer15AfterFizzBuzz.trick).toBe("FIZZBUZZ");
     });
+
+    test("5. Test trick returned for a score instead of an explorer", () => {
+        const trickForScore1 = FizzBuzzService.applyValidationInNumber(1);
+        expect(trickForScore1).toBe(1);
+    });
 });
