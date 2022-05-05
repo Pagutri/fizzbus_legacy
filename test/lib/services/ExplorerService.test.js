@@ -1,5 +1,5 @@
-const Reader = require('../../../app/lib/utils/Reader.js');
-const ExplorerService = require('../../../app/lib/services/ExplorerService.js');
+const Reader = require("../../../app/lib/utils/Reader.js");
+const ExplorerService = require("../../../app/lib/services/ExplorerService.js");
 
 describe("Tests for ExplorerService", () => {
     test("1. Get the list of explorers that are only in the node mission", () => {
@@ -7,27 +7,27 @@ describe("Tests for ExplorerService", () => {
         const explorersInNode = ExplorerService.filterByMission(explorers, "node");
         expect(explorersInNode).toStrictEqual([
             {
-              "name": "Woopa1",
-              "githubUsername": "ajolonauta1",
-              "mission": "node"
+                "name": "Woopa1",
+                "githubUsername": "ajolonauta1",
+                "mission": "node"
             },
             {
-              "name": "Woopa2",
-              "githubUsername": "ajolonauta2",
-              "mission": "node"
+                "name": "Woopa2",
+                "githubUsername": "ajolonauta2",
+                "mission": "node"
             }
-        ])
-    })
+        ]);
+    });
 
     test("2. Get number of explorers in node mission", () => {
         const explorers = Reader.readJsonFile("test/lib/services/ExplorerService_testfile.json");
         const numberOfExplorers = ExplorerService.getAmountOfExplorersByMission(explorers, "node");
-        expect(numberOfExplorers).toBe(2)
-    })
+        expect(numberOfExplorers).toBe(2);
+    });
 
     test("3. Get GitHub usernames of explorers in node mission", () => {
         const explorers = Reader.readJsonFile("test/lib/services/ExplorerService_testfile.json");
         const usernames = ExplorerService.getExplorersUsernamesByMission(explorers, "node");
-        expect(usernames).toStrictEqual(["ajolonauta1", "ajolonauta2"])
-    })
-})
+        expect(usernames).toStrictEqual(["ajolonauta1", "ajolonauta2"]);
+    });
+});

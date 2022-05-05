@@ -8,8 +8,8 @@ class ExplorerService {
     }
 
     static getExplorersUsernamesByMission(explorers, mission) {
-        return explorers.filter((explorer) => explorer.mission == mission).map(function(explorer){return explorer.githubUsername});
+        return explorers.filter((explorer) => explorer.mission == mission).map(function(explorer){return explorer.githubUsername;});
     }
 }
 
-module.exports = ExplorerService
+module.exports = ExplorerService;
