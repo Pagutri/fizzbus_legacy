@@ -1,6 +1,5 @@
 const Reader = require("../utils/Reader.js");
 const ExplorerService = require("../services/ExplorerService.js");
-const FizzBuzzService = require("../services/FizzBuzzService.js");
 
 class ExplorerController {
     static getExplorersByMission(mission) {
@@ -19,4 +18,4 @@ class ExplorerController {
     }
 }
 
-module.exports = ExplorerController
+module.exports = ExplorerController;
