@@ -25,8 +25,13 @@ describe("Tests for FizzBuzzService", () => {
         expect(explorer15AfterFizzBuzz.trick).toBe("FIZZBUZZ");
     });
 
-    test("5. Test trick returned for a score instead of an explorer", () => {
+    test("5. Test trick returned for a score instead of an explorer, when score is not divisible by 3 nor 5", () => {
         const trickForScore1 = FizzBuzzService.applyValidationInNumber(1);
         expect(trickForScore1).toBe(1);
+    });
+
+    test("6. Test trick returned for a score instead of an explorer, when score is divisible only by 3", () => {
+        const trickForScore3 = FizzBuzzService.applyValidationInNumber(3);
+        expect(trickForScore3).toBe("FIZZ");
     });
 });
