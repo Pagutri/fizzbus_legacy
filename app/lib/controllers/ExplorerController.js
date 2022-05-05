@@ -3,8 +3,8 @@ const ExplorerService = require("../services/ExplorerService.js");
 const FizzBuzzService = require("../services/FizzBuzzService.js");
 
 class ExplorerController {
-    static getExplorersByMission(filePath, mission) {
-        const explorers = Reader.readJsonFile(filePath);
+    static getExplorersByMission(mission) {
+        const explorers = Reader.readJsonFile("explorers.json");
         return ExplorerService.filterByMission(explorers, mission);
     }
 }
