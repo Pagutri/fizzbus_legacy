@@ -16,8 +16,23 @@ describe("Tests for ExplorerController", () => {
         expect(amount).toBe(10);
     });
 
-    test("5. Test for getTrickByNumber, when score is not divisible by 3 nor 5", () => {
+    test("4. Test for getTrickByNumber, when score is not divisible by 3 nor 5", () => {
         const trickForScore1 = ExplorerController.getTrickByNumber(1);
         expect(trickForScore1).toBe(1);
+    });
+
+    test("5. Test for getTrickByNumber, when score is divisible only by 3", () => {
+        const trickForScore3 = ExplorerController.getTrickByNumber(3);
+        expect(trickForScore3).toBe("FIZZ");
+    });
+
+    test("6. Test for getTrickByNumber, when score is divisible by 5", () => {
+        const trickForScore5 = ExplorerController.getTrickByNumber(5);
+        expect(trickForScore5).toBe("BUZZ");
+    });
+
+    test("7. Test for getTrickByNumber, when score is divisible by 3 and 5", () => {
+        const trickForScore15 = ExplorerController.getTrickByNumber(15);
+        expect(trickForScore15).toBe("FIZZBUZZ");
     });
 });
