@@ -39,4 +39,9 @@ describe("Tests for FizzBuzzService", () => {
         const trickForScore5 = FizzBuzzService.applyValidationInNumber(5);
         expect(trickForScore5).toBe("BUZZ");
     });
+
+    test("8. Test trick returned for a score instead of an explorer, when score is divisible only by 3 and 5", () => {
+        const trickForScore15 = FizzBuzzService.applyValidationInNumber(15);
+        expect(trickForScore15).toBe("FIZZBUZZ");
+    });
 });
