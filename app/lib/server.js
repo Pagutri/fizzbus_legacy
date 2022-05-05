@@ -29,3 +29,9 @@ app.get("/v1/explorers/usernames/:mission", (request, response) => {
     const explorersUsernamesInMission = ExplorerController.getExplorersUsernamesByMission(mission);
     response.json({mission: request.params.mission, explorers: explorersUsernamesInMission});
 });
+
+app.get("/v1/fizzbuzz/:score", (request, response) => {
+    const number = request.params.score;
+    const trickForNumber = ExplorerController.getTrickByNumber(number);
+    response.json({score: request.params.score, trick: trickForNumber});
+});
