@@ -12,6 +12,11 @@ class ExplorerController {
         const explorers = Reader.readJsonFile("explorers.json");
         return ExplorerService.getExplorersUsernamesByMission(explorers, mission);
     }
+
+    static getExplorersAmountByMission(mission) {
+        const explorers = Reader.readJsonFile("explorers.json");
+        return ExplorerService.getAmountOfExplorersByMission(explorers, mission);
+    }
 }
 
 module.exports = ExplorerController
