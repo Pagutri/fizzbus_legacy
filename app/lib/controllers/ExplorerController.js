@@ -1,5 +1,6 @@
 const Reader = require("../utils/Reader.js");
 const ExplorerService = require("../services/ExplorerService.js");
+const FizzBuzzService = require("../services/FizzBuzzService.js");
 
 class ExplorerController {
     static getExplorersByMission(mission) {
@@ -15,6 +16,10 @@ class ExplorerController {
     static getExplorersAmountByMission(mission) {
         const explorers = Reader.readJsonFile("explorers.json");
         return ExplorerService.getAmountOfExplorersByMission(explorers, mission);
+    }
+
+    static getTrickByNumber(number) {
+        return FizzBuzzService.applyValidationInNumber(number);
     }
 }
 
