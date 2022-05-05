@@ -11,8 +11,8 @@ describe("Tests for ExplorerController", () => {
         expect(usernames[6]).toBe("ajolonauta12");
     });
 
-    test("3. Test for getExplorersAmonutByMission", () => {
-        const amount = ExplorerController.getExplorersAmonutByMission("node");
+    test("3. Test for getExplorersAmountByMission", () => {
+        const amount = ExplorerController.getExplorersAmountByMission("node");
         expect(amount).toBe(10);
     });
 });
